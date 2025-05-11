@@ -51,7 +51,7 @@ init_db()
 
 @app.route('/')
 def index():
-    return render_template('moodtracker.html')
+    return render_template('moodTracker.html')
 
 
 @app.route('/api/mood', methods=['POST'])
@@ -198,9 +198,6 @@ def get_mood_data():
         'calendarData': calendar_data,
         'moodStats': stats
     })
-@app.route('/game')
-def game():
-    return send_from_directory('../game', 'index.html')
 
 def calculate_mood_stats(mood_list):
     if not mood_list:
